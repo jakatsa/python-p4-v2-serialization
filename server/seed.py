@@ -24,7 +24,7 @@ with app.app_context():
         pet = Pet(name=fake.first_name(), species=rc(species))
         pets.append(pet)
 
-    # Insert each Pet in the list into the "pets" table
+    # Insert each Pet in the list into the "pets" tables
     db.session.add_all(pets)
 
     # Commit the transaction
